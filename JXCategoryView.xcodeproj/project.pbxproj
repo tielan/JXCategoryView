@@ -132,6 +132,7 @@
 		DB3BE022217880EF0002ADE0 /* JXCategorySubTitleCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3BE01B217880EF0002ADE0 /* JXCategorySubTitleCellModel.m */; };
 		DB3BE023217880EF0002ADE0 /* JXCategorySubTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3BE01D217880EF0002ADE0 /* JXCategorySubTitleView.m */; };
 		DB3BE027217881130002ADE0 /* SegmentTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3BE026217881130002ADE0 /* SegmentTitleViewController.m */; };
+		DB3BE02A217884A60002ADE0 /* SubTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3BE029217884A60002ADE0 /* SubTitleViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -345,6 +346,8 @@
 		DB3BE01D217880EF0002ADE0 /* JXCategorySubTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXCategorySubTitleView.m; sourceTree = "<group>"; };
 		DB3BE025217881130002ADE0 /* SegmentTitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentTitleViewController.h; sourceTree = "<group>"; };
 		DB3BE026217881130002ADE0 /* SegmentTitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentTitleViewController.m; sourceTree = "<group>"; };
+		DB3BE028217884A50002ADE0 /* SubTitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubTitleViewController.h; sourceTree = "<group>"; };
+		DB3BE029217884A60002ADE0 /* SubTitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubTitleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -858,6 +861,8 @@
 		DB3BE024217881130002ADE0 /* Segment */ = {
 			isa = PBXGroup;
 			children = (
+				DB3BE028217884A50002ADE0 /* SubTitleViewController.h */,
+				DB3BE029217884A60002ADE0 /* SubTitleViewController.m */,
 				DB3BE025217881130002ADE0 /* SegmentTitleViewController.h */,
 				DB3BE026217881130002ADE0 /* SegmentTitleViewController.m */,
 			);
@@ -1042,6 +1047,7 @@
 				19562CDF212A94C90095AA27 /* JXCategoryImageCellModel.m in Sources */,
 				19302330211AD88300AF1444 /* TitleViewController.m in Sources */,
 				19CF184B216D9BD90093C775 /* VerticalListCollectionView.m in Sources */,
+				DB3BE02A217884A60002ADE0 /* SubTitleViewController.m in Sources */,
 				DB3BE027217881130002ADE0 /* SegmentTitleViewController.m in Sources */,
 				19562CDC212A94BE0095AA27 /* JXCategoryImageCell.m in Sources */,
 				190A54E2206397370050B327 /* ViewController.m in Sources */,

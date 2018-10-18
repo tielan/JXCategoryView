@@ -11,6 +11,8 @@
 #import "CellCustomizeViewController.h"
 #import "SpecialCustomizeViewController.h"
 #import "SegmentTitleViewController.h"
+#import "SubTitleViewController.h"
+
 @interface ViewController ()
 
 @end
@@ -64,6 +66,14 @@
         {
         
             SegmentTitleViewController *vc = [[SegmentTitleViewController alloc] init];
+            vc.title = title;
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 4:
+        {
+            
+            SubTitleViewController *vc = [[SubTitleViewController alloc] init];
             vc.title = title;
             [self.navigationController pushViewController:vc animated:YES];
         }

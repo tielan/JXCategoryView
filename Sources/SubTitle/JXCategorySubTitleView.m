@@ -72,7 +72,7 @@
     JXCategorySubTitleCellModel *leftModel = (JXCategorySubTitleCellModel *)leftCellModel;
     JXCategorySubTitleCellModel *rightModel = (JXCategorySubTitleCellModel *)rightCellModel;
     
-    if(ratio > 0.80){
+    if(ratio > 0.98){
         if (self.titleLabelZoomEnabled && self.titleLabelZoomScrollGradientEnabled) {
             leftModel.titleLabelZoomScale = [JXCategoryFactory interpolationFrom:self.titleLabelZoomScale to:1.0 percent:ratio];
             leftModel.subtitleAlpha = [JXCategoryFactory interpolationFrom:0 to:1.0 percent:ratio];

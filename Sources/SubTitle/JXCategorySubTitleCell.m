@@ -10,6 +10,8 @@
 
 @interface JXCategorySubTitleCell()
 
+@property(nonatomic,assign) NSInteger preTag;
+
 @end
 
 @implementation JXCategorySubTitleCell
@@ -29,13 +31,13 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    if(self.titleLabel.tag == 1){
-        self.titleLabel.center = self.contentView.center;
-    }else{
-        self.titleLabel.center = CGPointMake(self.contentView.center.x, self.contentView.center.y-6);
-        self.subTitleLabel.center = CGPointMake(self.contentView.center.x, self.contentView.center.y+8);
-    }
+    NSInteger tag = self.titleLabel.tag;
     
+    NSLog(@"%@---%ld---%ld",self.titleLabel.text,(long)tag,self.preTag);
+    self.titleLabel.center = CGPointMake(self.contentView.center.x, self.contentView.center.y-6*tag*0.01);
+    self.subTitleLabel.center = CGPointMake(self.contentView.center.x, self.contentView.center.y+8*tag*0.01);
+    
+    self.preTag = tag;
 }
 
 - (void)reloadData:(JXCategoryBaseCellModel *)cellModel {
@@ -56,19 +58,13 @@
     self.subTitleLabel.font = [UIFont systemFontOfSize:8];
     self.titleLabel.font = [UIFont fontWithDescriptor:fontDescriptor size:pointSize*myCellModel.titleLabelZoomScale];
    
-    
-    if (myCellModel.selected) {
-        self.titleLabel.textColor = myCellModel.titleSelectedColor;
-        self.subTitleLabel.alpha = myCellModel.subtitleAlpha;
-    }else {
-        self.titleLabel.textColor = myCellModel.titleColor;
-        self.subTitleLabel.alpha = myCellModel.subtitleAlpha;
-    }
-    self.titleLabel.tag = myCellModel.selected ? 1 : 0;
+    self.titleLabel.tag = myCellModel.subtitleAlpha * 100;
     self.titleLabel.text = myCellModel.title;
     self.subTitleLabel.text = @"ネットス";
+    
     [self.titleLabel sizeToFit];
     [self.subTitleLabel sizeToFit];
+    
     [self setNeedsLayout];
     [self layoutIfNeeded];
 }
