@@ -1,3 +1,9 @@
+
+## fork 修改记录
+### 1.添加分类居中效果 即当分类宽度小于当前屏幕时 居中对齐
+
+
+
 <div align=center><img src="JXCategoryView/Images/JXCategoryView.png" width="405" height="63" /></div>
 
 [![platform](https://img.shields.io/badge/platform-iOS-blue.svg?style=plastic)](#)
