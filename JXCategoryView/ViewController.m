@@ -10,7 +10,7 @@
 #import "IndicatorCustomizeViewController.h"
 #import "CellCustomizeViewController.h"
 #import "SpecialCustomizeViewController.h"
-
+#import "SegmentTitleViewController.h"
 @interface ViewController ()
 
 @end
@@ -56,6 +56,14 @@
         {
             UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
             SpecialCustomizeViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:NSStringFromClass([SpecialCustomizeViewController class])];
+            vc.title = title;
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 3:
+        {
+        
+            SegmentTitleViewController *vc = [[SegmentTitleViewController alloc] init];
             vc.title = title;
             [self.navigationController pushViewController:vc animated:YES];
         }
